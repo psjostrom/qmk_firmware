@@ -1,0 +1,12 @@
+#pragma once
+
+
+#define RGBLIGHT_LAYERS
+
+#ifdef AUDIO_ENABLE
+#    define AUDIO_INIT_DELAY
+#    define STARTUP_SONG SONG(PREONIC_SOUND)
+
+#    define DEFAULT_LAYER_SONGS \
+        { SONG(QWERTY_SOUND), SONG(COLEMAK_SOUND) }
+#endif

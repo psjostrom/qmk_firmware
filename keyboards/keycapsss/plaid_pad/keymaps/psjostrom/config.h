@@ -1,4 +1,4 @@
-/* Copyright 2021 Kyle McCreery
+/* Copyright 2021 Ben Roesner (keycapsss.com)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,9 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "waka60.h"
-void board_init(void) {
-    // B9 is configured as I2C1_SDA in the board file; that function must be
-    // disabled before using B7 as I2C1_SDA.
-    setPinInputHigh(B9);
-}
+#pragma once
+
+// place overrides here
+#define OLED_FONT_H "keyboards/keycapsss/plaid_pad/keymaps/oled/glcdfont.c"
+
+#define COMBO_COUNT 3
