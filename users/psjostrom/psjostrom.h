@@ -6,22 +6,31 @@ enum layers {
     LY_LOWER,
     LY_RAISE,
     LY_ADJUST,
+    LY_MOUSE
 };
 
 enum custom_keycodes {
-    KC_BASE = SAFE_RANGE,
-    KC_SWE,
-    KC_LOWER,
-    KC_RAISE,
-    KC_ADJUST,
+    BASE = SAFE_RANGE,
+    SWE,
+    LOWER,
+    RAISE,
+    ADJUST,
     KC_PRVWD,
     KC_NXTWD,
     KC_LSTRT,
     KC_LEND,
-    KC_DLINE
+    KC_DLINE,
+    MOUSE
 };
 
 #define MUTE_ZOOM LSG(KC_A)
+
+// Swedish characters
+#define KC_AA LALT(KC_LBRC) // Å
+#define KC_AE LALT(KC_QUOT) // Ä
+#define KC_OE LALT(KC_SCLN) // Ö
+
+#define KC_BACK LCTL(KC_MINS) // Navigate backwards in VS Code, Firefox etc
 
 // ENCODER ACTIONS
 #ifdef ENCODER_ENABLE

@@ -3,17 +3,22 @@
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case KC_BASE:
+        case BASE:
             if (record->event.pressed) {
                 set_single_persistent_default_layer(LY_BASE);
             }
             return false;
-        case KC_SWE:
+        case SWE:
             if (record->event.pressed) {
                 set_single_persistent_default_layer(LY_SWE);
             }
             return false;
-        case KC_LOWER:
+        case MOUSE:
+            if (record->event.pressed) {
+                set_single_persistent_default_layer(LY_MOUSE);
+            }
+            return false;
+        case LOWER:
             if (record->event.pressed) {
                 layer_on(LY_LOWER);
                 update_tri_layer(LY_LOWER, LY_RAISE, LY_ADJUST);
@@ -22,7 +27,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 update_tri_layer(LY_LOWER, LY_RAISE, LY_ADJUST);
             }
             return false;
-        case KC_RAISE:
+        case RAISE:
             if (record->event.pressed) {
                 layer_on(LY_RAISE);
                 update_tri_layer(LY_LOWER, LY_RAISE, LY_ADJUST);
@@ -31,7 +36,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 update_tri_layer(LY_LOWER, LY_RAISE, LY_ADJUST);
             }
             return false;
-        case KC_ADJUST:
+        case ADJUST:
             if (record->event.pressed) {
                 layer_on(LY_ADJUST);
             } else {
