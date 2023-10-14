@@ -10,6 +10,7 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
+MIDI_ENABLE = yes
 
 SPLIT_KEYBOARD = yes
-TAP_DANCE_ENABLE = yes
+TAP_DANCE_ENABLE = no
