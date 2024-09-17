@@ -45,6 +45,7 @@ enum custom_keycodes {
 #define KC_LOG C(G(KC_L))
 #define KC_COPYPATH A(G(KC_C))
 #define KC_DEVTOOLS A(G(KC_I))
+#define KC_SCREENSHOT S(A(KC_4))
 
 // ENCODER ACTIONS
 #ifdef ENCODER_ENABLE
